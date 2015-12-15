@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="poc-angular">
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <script src="js/lib/jquery.js"></script>
+        <script src="js/lib/bootstrap.js"></script>
+        <script src="js/lib/angular.js"></script>
+
+        <script src="js/app.js"></script>
+
+        <title>Poc angular</title>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="parentController">-->
+
+            <!--&lt;!&ndash;Nom : {{ utilisateur.nom }}<br>&ndash;&gt;-->
+            <!--&lt;!&ndash;Prénom : {{utilisateur.prenom}}&ndash;&gt;-->
+
+            <!--<h1>{{ titre }}</h1>-->
+            <!--<div ng-controller="enfantController">-->
+            <!--<h1>{{ titre }}</h1>-->
+            <!--<h1>{{ $parent.titre }}</h1>-->
+            <!--</div>-->
+
+            <!--</div>-->
+
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="userController">
+
+                <form action="" method="post" role="form">
+                    <legend>Se connecter</legend>
+
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" name="login" id="login" placeholder="Login..." ng-model="username" ng-model-options="{ getterSetter : true}" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="login" id="password" placeholder="Password..." ng-model="password" ng-model-options="{ debounce : 1000}" autocomplete="off">
+                    </div>
+
+                </form>
+
+            </div>
+
+            <hr>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="evtController">
+
+
+                <form action="" method="post" role="form">
+                    <legend>Event</legend>
+
+                    <span>Somme : </span>
+
+                    <span ng-bind="sum"></span>
+
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="button" class="form-control" name="" id="" placeholder="" ng-click="increment()" value="{{numeraire}}">
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="evtController">
+
+
+                <form action="" method="post" role="form">
+                    <legend>Event 2</legend>
+
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="text" class="form-control" name="" id="" placeholder="" ng-change="compute()" ng-model="name">
+                    </div>
+
+
+                    <p ng-bind="welcomeMessage"></p>
+                </form>
+
+            </div>
+        </div>
+
+    </body>
+</html>
